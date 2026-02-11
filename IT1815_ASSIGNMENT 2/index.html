@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Judo Club | One Page</title>
+
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #0d0d0d;
+      color: white;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      background-image: url("Untitled design.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-left: 10%;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.35);
+      z-index: 1;
+    }
+    .slide-in {
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideIn 1.2s ease-out forwards;
+      position: relative;
+      z-index: 2;
+    }
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .btn-custom {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+    .btn-custom:hover {
+      background-color: #e3e3e3;
+    }
+
+    /* HIGHLIGHTS */
+    .highlights {
+      background-color: #121212;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .highlight-card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .highlight-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
+    }
+    .highlight-card p {
+      color: #ccc;
+    }
+
+    /* ABOUT */
+    .story-section {
+      padding: 60px 15px;
+      background-color: #0d0d0d;
+    }
+    .story-image {
+      background-color: #1a1a1a;
+      border-radius: 15px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .story-text p {
+      font-size: 1.1rem;
+      color: #cccccc;
+    }
+    .coach-card {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      height: 100%;
+      transition: transform 0.3s;
+    }
+    .coach-card:hover {
+      transform: translateY(-5px);
+    }
+    .coach-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      background-color: #333;
+    }
+    .coach-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    /* FAQ */
+    .faq-section {
+      padding: 60px 15px;
+      background-color: #131313;
+    }
+    .accordion-button::after {
+      filter: invert(1);
+    }
+    .accordion-button {
+      background-color: #1f1f1f;
+      color: #ffffff;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #333;
+      color: #ffffff;
+    }
+    .accordion-body {
+      background-color: #1f1f1f;
+      color: #ffffff;
+    }
+    .accordion-item {
+      border: 1px solid #333;
+    }
+    a {
+      color: #85a1ff;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #0b0b0b;
+      padding: 30px 0;
+      text-align: center;
+      color: #bbbbbb;
+    }
+    .footer i {
+      margin: 0 10px;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding-left: 5%;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+        <img src="logo.png" alt="Judo Club Logo" height="50">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
+        <li class="nav-item"><a class="nav-link" href="joinus.html">Join Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>>
+
+<!-- HOME -->
+<section id="home" class="hero">
+  <div class="slide-in">
+    <h1>Discipline. Strength. Respect.</h1>
+    <p>Welcome to the Judo Club — where you train hard, fight smart, and grow stronger.</p>
+    <a href="#about" class="btn btn-custom">Learn More</a>
+  </div>
+</section>
+
+<section class="highlights">
+  <h2 class="mb-5">Highlights</h2>
+  <div class="container">
+    <div class="row text-center justify-content-center">
+      <div class="col-md-5">
+        <div class="highlight-card">
+          <i class="bi bi-play-circle-fill" style="font-size: 2rem"></i>
+          <h5>Training Sneak Peek</h5>
+          <p>Watch a video of our training sessions and see what we do.</p>
+          <button class="btn btn-sm btn-outline-light mt-2" id="viewVideoBtn">View More</button>
+          <div class="ratio ratio-16x9 mt-3" id="videoContainer" style="display: none">
+            <iframe src="https://www.youtube.com/embed/c0ThRlDd-L0" title="YouTube video" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="highlight-card">
+          <i class="bi bi-people-fill" style="font-size: 2rem"></i>
+          <h5>Meet the Team</h5>
+          <p>Get to know our dedicated members and instructors.</p>
+          <a href="#about" class="btn btn-sm btn-outline-light">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="story-section">
+  <div class="container text-center page-header">
+    <h1>About Judo Club</h1>
+  </div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="https://www.judoinside.com/photos/hans/2016/Grand_Slam_Tokyo/20161202_TokyoGS_IJF_JW_Hifumi%20Abe.jpg" 
+             alt="Founded Year" class="img-fluid story-image">
+      </div>
+      <div class="col-md-6 story-text">
+        <h2>Our Story</h2>
+        <p>Founded in 2015, NYP Judo Club began when a handful of determined students rolled out their first tatami mats in 2015. What started as late-night training sessions between classes grew into an official dojo where technique and camaraderie collide. We've stayed true to our scrappy beginnings - valuing grit over gear, and community over championships (though we've collected plenty of those too). Every bow, breakfall, and bout carries forward the founders' vision: judo for all, excellence for those who earn it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h2 class="mb-4">Coaches & Leaders</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="coach-card">
+          <img src="coach1.png" alt="Coach 1">
+          <h5>Coach Azfar</h5>
+          <p>Head Coach — Coach Azfar has extensive experience teaching judo to adults in various settings. He has also previously coached judo at BJJ, Krav Maga, and MMA gyms.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="coach-card">
+          <img src="coach2.jpeg" alt="Coach 2">
+          <h5>Assistant Coach Jiayao</h5>
+          <p>Assistant Coach Jiayao — Jiayao is a highly detail-oriented instructor with exceptional technical precision. His methodical approach and deep understanding of judo mechanics allow him to refine techniques for both competitors and recreational practitioners.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="coach-card">
+          <img src="captain.jpeg" alt="Coach 3">
+          <h5>Captain James Ng</h5>
+          <p>Captain James — With a commanding presence and deep technical mastery, James sets the standard for excellence in both practice and competition. His ability to analyse and elevate team performance—while leading by example—makes him an indispensable pillar of our judo community.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-6 d-flex flex-column justify-content-between">
+        <div class="mb-4">
+          <h2 class="mb-4">Training Schedule</h2>
+          <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>4:00 PM – 6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>6:30 PM – 8:30 PM</td>
+                </tr>
+            </tbody>
+            </table>
+
+        </div>
+        <div>
+          <h2 class="mb-4">Venue</h2>
+          <p><strong>Location:</strong> Nanyang Polytechnic Sports Hall, 180 Ang Mo Kio Ave 8, Singapore 569830<br>
+          <strong>Nearest MRT:</strong> Yio Chu Kang (NS15)</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-4">How to Get There</h2>
+        <div class="ratio ratio-16x9" style="height: 100%;">
+          <video controls>
+            <source src="directory.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq-section">
+  <div class="container">
+    <h1 class="text-center">Frequently Asked Questions</h1>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+            Can beginners join?
+          </button>
+        </h2>
+        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body"><strong>Yes.</strong> As long as you can show your passion and are determined to overcome the challenges.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+            How can I join the Judo club
+          </button>
+        </h2>
+        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">You can access our <a href="joinus.html">Join Us</a> page to sign up</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+            Is there CCA points?
+          </button>
+        </h2>
+        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body"><strong>Yes.</strong> CCA points are given to members who participate frequently.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">
+            Is this for me?
+          </button>
+        </h2>
+        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">You may give it a try first by signing up <a href="joinus.html">here</a> then decide if you want to quit if it's not your cup of tea</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">
+            What can we learn from this CCA?
+          </button>
+        </h2>
+        <div id="q5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/c0ThRlDd-L0" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div>
+    <i class="bi bi-facebook"></i>
+    <i class="bi bi-envelope-fill"></i>
+    <p class="mt-2">contact@judoclub.com</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById("viewVideoBtn").addEventListener("click", function () {
+    const video = document.getElementById("videoContainer");
+    video.style.display = video.style.display === "none" ? "block" : "none";
+    this.textContent = video.style.display === "block" ? "Hide Video" : "View More";
+  });
+</script>
+
+</body>
+</html>
